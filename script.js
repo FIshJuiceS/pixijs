@@ -6,23 +6,23 @@ const app = new Application();
 document.body.appendChild(app.view);
 
 
-const texture = await Assets.load('bunny.png');
+const texture = await Assets.load('FINALBOSS.png')
 
 
-const bunny = new Sprite(texture);
+const entity = new Sprite(texture);
 
 
-bunny.x = app.renderer.width / 2;
-bunny.y = app.renderer.height / 2;
+entity.x = app.renderer.width / 2;
+entity.y = app.renderer.height / 2;
 
 
-bunny.anchor.x = 0.5;
-bunny.anchor.y = 0.5;
+entity.anchor.x = 0.5;
+entity.anchor.y = 0.5;
 
 
-app.stage.addChild(bunny);
+app.stage.addChild(entity);
 
 
 app.ticker.add(() => {
-    bunny.rotation += 0.01;
+    entity.rotation += 0.01;
 });
